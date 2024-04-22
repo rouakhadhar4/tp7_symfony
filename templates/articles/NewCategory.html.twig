@@ -1,0 +1,42 @@
+
+
+{# templates/articles/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des Articles
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+
+  
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Ajouter une catégorie</h5>
+                </div>
+                <div class="card-body">
+                    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+                    <div class="mb-3">
+                        {{ form_row(form.titre, {'attr': {'class': 'form-control', 'placeholder': 'Titre de la catégorie'}}) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_row(form.description, {'attr': {'class': 'form-control', 'placeholder': 'Description de la catégorie'}}) }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Créer</button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
